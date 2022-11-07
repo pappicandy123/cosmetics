@@ -322,7 +322,7 @@ def pay(request):
             account.save()
 
             delivery = Shipping()
-            delivery.user = user
+            delivery.user = request.user
             delivery.first_name = first_name
             delivery.last_name = last_name
             delivery.email = email

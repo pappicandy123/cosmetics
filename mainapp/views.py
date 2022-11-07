@@ -143,7 +143,7 @@ def profile_password(request):
             return redirect('profile_password')
 
     context = {
-        'form': form,
+        'form': form, 
         'profile': profile,
     }        
     return render(request, 'profile_password.html', context)
@@ -161,7 +161,7 @@ def itemtocart(request):
         basket = Shopcart.objects.filter(user__username = request.user.username, paid= False)
         if basket:
             cart = Shopcart.objects.filter(product= selecteditem, user__username = request.user.username ,paid=False).first()
-            if cart:
+            if cart: 
                 cart.quantity += itemquantity
                 cart.amount = cart.quantity * cart.price
                 cart.save()
@@ -285,7 +285,7 @@ def pay(request):
     if request.method == 'POST':
         api_key = 'sk_test_2fd9254f6f947de8430053723f33d0d763b3b696'
         curl = ' https://api.paystack.co/transaction/initialize'
-        cburl = 'http://54.197.38.200/callback'
+        cburl = 'http://3.249.41.104/callback'
         ref = str(uuid.uuid4())
         amount = float(request.POST['total']) * 100
         cartno = request.POST['cartno']

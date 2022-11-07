@@ -285,7 +285,7 @@ def pay(request):
     if request.method == 'POST':
         api_key = 'sk_test_2fd9254f6f947de8430053723f33d0d763b3b696'
         curl = ' https://api.paystack.co/transaction/initialize'
-        cburl = 'http://3.249.41.104/callback'
+        cburl = 'http://34.251.229.69/callback'
         ref = str(uuid.uuid4())
         amount = float(request.POST['total']) * 100
         cartno = request.POST['cartno']

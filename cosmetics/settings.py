@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-f$l0!q2&mr0%qo+17q!v*&sz8@pyj+h7f#%1nxp!p!b&w$($58
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['34.251.229.69']
+ALLOWED_HOSTS = ['54.73.41.254']
 
 
 # Application definition
@@ -78,23 +78,23 @@ WSGI_APPLICATION = 'cosmetics.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cosmeticsdb',
-        'USER': 'cosmeticsadmin',
-        'PASSWORD': 'admin1234',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'cosmeticsdb',
+#         'USER': 'cosmeticsadmin',
+#         'PASSWORD': 'admin1234',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
